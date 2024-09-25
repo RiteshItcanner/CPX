@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PerformanceOverviewCell" rowHeight="167" id="KGk-i7-Jjw" customClass="PerformanceOverviewCell" customModule="cpx" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="396" height="167"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="396" height="167"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4w-Vi-EPm">
+                        <rect key="frame" x="10" y="10" width="376" height="147"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eqm-pT-u5Z">
+                                <rect key="frame" x="16" y="16" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="7uY-9s-B3J"/>
+                                    <constraint firstAttribute="height" constant="40" id="BML-fJ-xrH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZX-CO-ZLF">
+                                <rect key="frame" x="66" y="28" width="234" height="16.333333333333329"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" name="ThemeTextColor"/>
+                                            <font key="NSFont" size="14" name="AktivGroteskCorp-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dl5-SN-82d">
+                                <rect key="frame" x="316" y="16" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="63B-DD-OnI"/>
+                                    <constraint firstAttribute="height" constant="40" id="rtx-sc-t5x"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrow-right"/>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zGb-iP-Uhz">
+                                <rect key="frame" x="16" y="66" width="344" height="71"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-M3-gzR">
+                                        <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="465-fe-cLm">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="35.666666666666664"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="256">
+                                                        <attributes>
+                                                            <color key="NSColor" name="ThemeTextColor"/>
+                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kd-BS-qFW">
+                                                <rect key="frame" x="0.0" y="35.666666666666671" width="114.66666666666667" height="35.333333333333329"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="CONVERSIONS">
+                                                        <attributes>
+                                                            <color key="NSColor" name="ThemeTextColor"/>
+                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Medium"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FvB-91-Dy7">
+                                        <rect key="frame" x="114.66666666666666" y="0.0" width="114.66666666666666" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dF9-tK-fKF">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="35.666666666666664"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="AED 1125.35">
+                                                        <attributes>
+                                                            <color key="NSColor" name="ThemeTextColor"/>
+                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYE-a9-WWG">
+                                                <rect key="frame" x="0.0" y="35.666666666666671" width="114.66666666666667" height="35.333333333333329"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="PAYOUT">
+                                                        <attributes>
+                                                            <color key="NSColor" name="ThemeTextColor"/>
+                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Medium"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="R01-Iq-8qN">
+                                        <rect key="frame" x="229.33333333333334" y="0.0" width="114.66666666666666" height="71"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIy-lz-rDP">
+                                                <rect key="frame" x="0.0" y="0.0" width="114.66666666666667" height="35.666666666666664"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="256">
+                                                        <attributes>
+                                                            <color key="NSColor" name="ThemeTextColor"/>
+                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Bold"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24p-ca-pQc">
+                                                <rect key="frame" x="0.0" y="35.666666666666671" width="114.66666666666667" height="35.333333333333329"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="REVENUE">
+                                                        <attributes>
+                                                            <color key="NSColor" name="ThemeTextColor"/>
+                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Medium"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96078431372549022" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zGb-iP-Uhz" firstAttribute="top" secondItem="eqm-pT-u5Z" secondAttribute="bottom" constant="10" id="5up-0k-rsz"/>
+                            <constraint firstItem="Dl5-SN-82d" firstAttribute="centerY" secondItem="pZX-CO-ZLF" secondAttribute="centerY" id="6HP-R9-ecQ"/>
+                            <constraint firstItem="zGb-iP-Uhz" firstAttribute="top" secondItem="Dl5-SN-82d" secondAttribute="bottom" constant="10" id="DWs-HZ-Ibw"/>
+                            <constraint firstAttribute="trailing" secondItem="Dl5-SN-82d" secondAttribute="trailing" constant="20" id="Jgp-t7-2H3"/>
+                            <constraint firstAttribute="bottom" secondItem="zGb-iP-Uhz" secondAttribute="bottom" constant="10" id="QxP-3f-5pf"/>
+                            <constraint firstItem="eqm-pT-u5Z" firstAttribute="leading" secondItem="U4w-Vi-EPm" secondAttribute="leading" constant="16" id="XB6-w1-Vr0"/>
+                            <constraint firstAttribute="trailing" secondItem="zGb-iP-Uhz" secondAttribute="trailing" constant="16" id="e5n-0A-JMH"/>
+                            <constraint firstItem="Dl5-SN-82d" firstAttribute="leading" secondItem="pZX-CO-ZLF" secondAttribute="trailing" constant="16" id="iy5-kk-skL"/>
+                            <constraint firstItem="pZX-CO-ZLF" firstAttribute="centerY" secondItem="eqm-pT-u5Z" secondAttribute="centerY" id="oTd-Jo-CAF"/>
+                            <constraint firstItem="pZX-CO-ZLF" firstAttribute="leading" secondItem="eqm-pT-u5Z" secondAttribute="trailing" constant="10" id="ocg-hj-JvH"/>
+                            <constraint firstItem="zGb-iP-Uhz" firstAttribute="leading" secondItem="U4w-Vi-EPm" secondAttribute="leading" constant="16" id="ufI-ca-Rzg"/>
+                            <constraint firstItem="eqm-pT-u5Z" firstAttribute="top" secondItem="U4w-Vi-EPm" secondAttribute="top" constant="16" id="vhr-SL-vxj"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="U4w-Vi-EPm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hQS-ZD-I9d"/>
+                    <constraint firstAttribute="trailing" secondItem="U4w-Vi-EPm" secondAttribute="trailing" constant="10" id="i8O-Tn-iiU"/>
+                    <constraint firstItem="U4w-Vi-EPm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="iRm-K9-1eH"/>
+                    <constraint firstAttribute="bottom" secondItem="U4w-Vi-EPm" secondAttribute="bottom" constant="10" id="xzi-23-CRD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="arrowButton" destination="Dl5-SN-82d" id="JzT-R6-D2S"/>
+                <outlet property="companyLogoImageView" destination="eqm-pT-u5Z" id="MZK-PI-RvJ"/>
+                <outlet property="companyNameLabel" destination="pZX-CO-ZLF" id="cpq-BG-e9H"/>
+                <outlet property="conversionsLabel" destination="8Kd-BS-qFW" id="f0b-hl-dzd"/>
+                <outlet property="conversionsValueLabel" destination="465-fe-cLm" id="DbD-uQ-fme"/>
+                <outlet property="payoutLabel" destination="sYE-a9-WWG" id="yth-vG-le7"/>
+                <outlet property="payoutValueLabel" destination="dF9-tK-fKF" id="yIj-aE-zae"/>
+                <outlet property="revenueLabel" destination="24p-ca-pQc" id="Z4V-b2-nkK"/>
+                <outlet property="revenueValueLabel" destination="gIy-lz-rDP" id="36q-2i-Gk2"/>
+            </connections>
+            <point key="canvasLocation" x="166.41221374045801" y="45.422535211267608"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow-right" width="40" height="40.333332061767578"/>
+        <namedColor name="ThemeTextColor">
+            <color red="0.2196078431372549" green="0.098039215686274508" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+framework module MoEngageInbox {
+  umbrella header "MoEngageInbox-framework-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MoEngageInbox.Swift {
+  header "MoEngageInbox-Swift.h"
+  requires objc
+}

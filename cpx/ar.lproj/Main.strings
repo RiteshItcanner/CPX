@@ -1,0 +1,93 @@
+
+/* Class = "UILabel"; text = "Your account is under review and we will contact you shortly"; ObjectID = "0e0-wN-Ixq"; */
+"0e0-wN-Ixq.text" = "Your account is under review and we will contact you shortly";
+
+/* Class = "UIButton"; normalTitle = "Resend Code"; ObjectID = "4qh-Cg-Urf"; */
+"4qh-Cg-Urf.normalTitle" = "Resend Code";
+
+/* Class = "UIButton"; configuration.title = "Continue with Apple"; ObjectID = "5FO-am-bc5"; */
+"5FO-am-bc5.configuration.title" = "Continue with Apple";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5FO-am-bc5"; */
+"5FO-am-bc5.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "01:49"; ObjectID = "8fb-Bw-rMa"; */
+"8fb-Bw-rMa.text" = "01:49";
+
+/* Class = "UILabel"; text = "Login"; ObjectID = "8fb-LK-Ka6"; */
+"8fb-LK-Ka6.text" = "Login";
+
+/* Class = "UILabel"; text = "Your face is now your password"; ObjectID = "CYC-pQ-Epd"; */
+"CYC-pQ-Epd.text" = "Your face is now your password";
+
+/* Class = "UIButton"; normalTitle = "Affiliate Log in or Sign up"; ObjectID = "HAH-X6-ipe"; */
+"HAH-X6-ipe.normalTitle" = "Affiliate Log in or Sign up";
+
+/* Class = "UITabBarItem"; title = "My Coupons"; ObjectID = "Hle-jf-9y3"; */
+"Hle-jf-9y3.title" = "My Coupons";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "I7d-gY-jrg"; */
+"I7d-gY-jrg.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Brand Log in"; ObjectID = "M3J-SL-ZaF"; */
+"M3J-SL-ZaF.normalTitle" = "Brand Log in";
+
+/* Class = "UILabel"; text = "Please enter your email to receive a verification code."; ObjectID = "Q3r-zv-fnL"; */
+"Q3r-zv-fnL.text" = "Please enter your email to receive a verification code.";
+
+/* Class = "UILabel"; text = "OR"; ObjectID = "Qu0-Zz-cdc"; */
+"Qu0-Zz-cdc.text" = "OR";
+
+/* Class = "UITabBarItem"; title = "Planner"; ObjectID = "SeB-rW-hoc"; */
+"SeB-rW-hoc.title" = "Planner";
+
+/* Class = "UITabBarItem"; title = "Planner"; ObjectID = "Txe-J5-p1e"; */
+"Txe-J5-p1e.title" = "Planner";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "VNv-nb-HSz"; */
+"VNv-nb-HSz.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "View your earnings and performance:"; ObjectID = "Wez-FC-61a"; */
+"Wez-FC-61a.text" = "View your earnings and performance:";
+
+/* Class = "UILabel"; text = "Become an affiliate and monetize it with CPX! Know more about CPX."; ObjectID = "Y37-zU-QKf"; */
+"Y37-zU-QKf.text" = "Become an affiliate and monetize it with CPX! Know more about CPX.";
+
+/* Class = "UITabBarItem"; title = "Notifications"; ObjectID = "Yfx-8T-ENz"; */
+"Yfx-8T-ENz.title" = "Notifications";
+
+/* Class = "UILabel"; text = "Enter the 4-Digit Code"; ObjectID = "bX1-hk-A8y"; */
+"bX1-hk-A8y.text" = "Enter the 4-Digit Code";
+
+/* Class = "UITabBarItem"; title = "Statistics"; ObjectID = "f3H-Yf-3OP"; */
+"f3H-Yf-3OP.title" = "Statistics";
+
+/* Class = "UILabel"; text = "Please enter the code from the SMS"; ObjectID = "g4A-A1-bfd"; */
+"g4A-A1-bfd.text" = "Please enter the code from the SMS";
+
+/* Class = "UILabel"; text = "Login with Face ID"; ObjectID = "gwj-fR-h9n"; */
+"gwj-fR-h9n.text" = "Login with Face ID";
+
+/* Class = "UILabel"; text = "Performance Overview"; ObjectID = "jUj-MO-oEA"; */
+"jUj-MO-oEA.text" = "Performance Overview";
+
+/* Class = "UITabBarItem"; title = "Account"; ObjectID = "kKb-pt-cyr"; */
+"kKb-pt-cyr.title" = "Account";
+
+/* Class = "UILabel"; text = "Didn’t receive a code?"; ObjectID = "kdH-So-3BX"; */
+"kdH-So-3BX.text" = "Didn’t receive a code?";
+
+/* Class = "UILabel"; text = "Now you can access a dashboard that allows you to see how much you have earned and your ranking based on performance."; ObjectID = "moW-Ds-ot8"; */
+"moW-Ds-ot8.text" = "Now you can access a dashboard that allows you to see how much you have earned and your ranking based on performance.";
+
+/* Class = "UIButton"; normalTitle = "Receive Code"; ObjectID = "ms1-mv-Euo"; */
+"ms1-mv-Euo.normalTitle" = "Receive Code";
+
+/* Class = "UIButton"; normalTitle = "Continue with Google"; ObjectID = "w2a-9q-P77"; */
+"w2a-9q-P77.normalTitle" = "Continue with Google";
+
+/* Class = "UILabel"; text = "English"; ObjectID = "y06-tB-XRW"; */
+"y06-tB-XRW.text" = "English";
+
+/* Class = "UIButton"; normalTitle = "Log in using other ways"; ObjectID = "zBB-Xy-h8n"; */
+"zBB-Xy-h8n.normalTitle" = "Log in using other ways";
