@@ -121,14 +121,19 @@ extension LoginVC: SocialLoginHelperDelegate {
                         user: User!) {
         switch network {
         case .google:
-//            authenticateWithIMS((user.user_email, user.user_name))
-            print(user)
+            print(user.user_email)
+            self.mailTF.text = user.user_email
+            sendOTPRequest(email: user.user_email)
+            
         case .apple:
             do {
                 let jwt = try decode(jwt: identityToken)
                 guard let email = jwt["email"].string else { return }
-//                authenticateWithIMS((email, ""))
                 print(email)
+//                guard let userId = jwt["sub"].string else {
+//                        print("User ID not found in the token")
+//                        return
+//                    }
                 self.mailTF.text = email
                 sendOTPRequest(email: email)
                 

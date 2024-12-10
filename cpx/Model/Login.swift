@@ -7,8 +7,56 @@
 
 import Foundation
 
+struct SuccessResponse: Codable {
+    let status: String?
+    let code: Int?
+    let result: Bool?
+    let message: String?
+    let data: CouponReqSubmitData?
+}
+
+struct CouponReqSubmitData: Codable {
+    let id: String?
+    let properties: CouponReqSubmitProperties?
+    let createdAt: String?
+    let updatedAt: String?
+    let archived: Bool?
+}
+
+struct CouponReqSubmitProperties: Codable {
+    let hs_body_preview: String?
+    let hs_body_preview_html: String?
+    let hs_body_preview_is_truncated: String?
+    let hs_createdate: String?
+    let hs_lastmodifieddate: String?
+    let hs_object_id: String?
+    let hs_object_source: String?
+    let hs_object_source_id: String?
+    let hs_object_source_label: String?
+    let hs_task_body: String?
+    let hs_task_completion_count: String?
+    let hs_task_family: String?
+    let hs_task_for_object_type: String?
+    let hs_task_is_all_day: String?
+    let hs_task_is_completed: String?
+    let hs_task_is_completed_call: String?
+    let hs_task_is_completed_email: String?
+    let hs_task_is_completed_linked_in: String?
+    let hs_task_is_completed_sequence: String?
+    let hs_task_is_overdue: String?
+    let hs_task_is_past_due_date: String?
+    let hs_task_missed_due_date: String?
+    let hs_task_missed_due_date_count: String?
+    let hs_task_priority: String?
+    let hs_task_status: String?
+    let hs_task_subject: String?
+    let hs_task_type: String?
+    let hs_timestamp: String?
+}
+
+
 struct OTPResponse {
-    let message: String
+    let message: String?
     let data: [String: Any]?
 
     init(data: [String: Any]?, message: String?) {
@@ -18,8 +66,8 @@ struct OTPResponse {
 }
 
 struct OTPError: Error {
-    let message: String
-    let code: Int
+    let message: String?
+    let code: Int?
 
     init(message: String, code: Int) {
         self.message = message

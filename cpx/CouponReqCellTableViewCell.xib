@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -71,27 +72,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="dSQ-yH-p17">
-                                <rect key="frame" x="16" y="75" width="24" height="56"/>
+                                <rect key="frame" x="16" y="75" width="36" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OxA-aa-Ggc">
-                                        <rect key="frame" x="0.0" y="0.0" width="24" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36" height="56"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="KSA">
+                                            <fragment content="Global">
                                                 <attributes>
                                                     <color key="NSColor" red="0.40392156862745099" green="0.43137254901960786" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <font key="NSFont" size="12" name="AktivGroteskCorp-Medium"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a79-xv-utE">
-                                        <rect key="frame" x="0.0" y="34" width="24" height="22"/>
-                                        <attributedString key="attributedText">
-                                            <fragment content="UAE">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.40392156862745099" green="0.43137254901960786" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="12" name="AktivGroteskCorp-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -103,10 +93,10 @@
                                 <rect key="frame" x="252.33333333333331" y="75" width="164.66666666666669" height="56"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jfc-ds-xQ2">
-                                        <rect key="frame" x="0.0" y="0.0" width="164.66666666666666" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="164.66666666666666" height="56"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-hx-5rZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="22"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="56"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="New $99.00">
                                                         <attributes>
@@ -118,36 +108,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yu-l5-f0u">
-                                                <rect key="frame" x="86.333333333333371" y="0.0" width="78.333333333333314" height="22"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="Return $99.00">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.95294117647058818" green="0.25490196078431371" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Medium"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jvt-rK-f5O">
-                                        <rect key="frame" x="0.0" y="34" width="164.66666666666666" height="22"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmD-Eo-7R4">
-                                                <rect key="frame" x="0.0" y="0.0" width="78.333333333333329" height="22"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment content="New $99.00">
-                                                        <attributes>
-                                                            <color key="NSColor" red="0.18431372549019609" green="0.58039215686274503" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="12" name="AktivGroteskCorp-Medium"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5L-9B-8Y8">
-                                                <rect key="frame" x="86.333333333333371" y="0.0" width="78.333333333333314" height="22"/>
+                                                <rect key="frame" x="86.333333333333371" y="0.0" width="78.333333333333314" height="56"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="Return $99.00">
                                                         <attributes>
@@ -177,8 +138,9 @@
                                         <attributedString key="attributedText">
                                             <fragment content="All Payouts">
                                                 <attributes>
-                                                    <color key="NSColor" name="ThemeTextColor"/>
+                                                    <color key="NSColor" name="ThemeColor"/>
                                                     <font key="NSFont" size="14" name="AktivGroteskCorp-Medium"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -251,13 +213,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="brandLbl" destination="Vat-mu-4dC" id="i0y-WK-9Lv"/>
+                <outlet property="globalNewPayoutValueLbl" destination="vuc-hx-5rZ" id="Hfy-iE-gdy"/>
+                <outlet property="globalReturnPayoutValueLbl" destination="0yu-l5-f0u" id="7Z4-lO-Pi4"/>
                 <outlet property="img" destination="fJi-Dq-BJX" id="6CC-zp-x0s"/>
-                <outlet property="ksaNewPayoutLbl" destination="vuc-hx-5rZ" id="8Xf-mM-6KF"/>
-                <outlet property="ksaReturnPayoutLbl" destination="0yu-l5-f0u" id="Tln-vB-Iaq"/>
                 <outlet property="payoutBtn" destination="9tL-qc-zDg" id="GUh-5I-Cds"/>
                 <outlet property="reqBtn" destination="AEr-2w-I14" id="MZG-1C-ek1"/>
-                <outlet property="uaeNewPayoutLbl" destination="wmD-Eo-7R4" id="C0e-sY-smu"/>
-                <outlet property="uaeReturnPayoutLbl" destination="o5L-9B-8Y8" id="lSe-Vo-sYi"/>
             </connections>
             <point key="canvasLocation" x="150.38167938931298" y="20.422535211267608"/>
         </tableViewCell>
@@ -269,9 +229,6 @@
         </namedColor>
         <namedColor name="ThemeColor">
             <color red="0.37647058823529411" green="0.18823529411764706" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="ThemeTextColor">
-            <color red="0.2196078431372549" green="0.098039215686274508" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

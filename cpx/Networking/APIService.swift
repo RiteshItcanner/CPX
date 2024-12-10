@@ -4,7 +4,8 @@
 //
 //  Created by Ritesh Sinha on 17/09/24.
 //
-
+//https://dados.cpx.ae/api - Live
+//https://dados.stag2.cpx.ae/api - Stage
 import Foundation
 import Alamofire
 
@@ -16,7 +17,7 @@ class APIService {
     private init() {}
 
     func sendOTP(email: String, completion: @escaping (Result<OTPResponse, OTPError>) -> Void) {
-        let url = "https://dados.stag2.cpx.ae/api/send_otp"
+        let url = "https://dados.cpx.ae/api/send_otp"
         let headers: HTTPHeaders = ["Content-Type": "application/json", "token": Constant.token]
         let parameters: [String: Any] = ["email": email]
 
@@ -40,7 +41,7 @@ class APIService {
     }
     
     func confirmOTP(email: String, otp: String, completion: @escaping (Result<ConfirmOTPResponse, OTPError>) -> Void) {
-        let url = "https://dados.stag2.cpx.ae/api/confirm_otp"
+            let url = "https://dados.cpx.ae/api/confirm_otp"
         let headers: HTTPHeaders = [
             "Content-Type": "application/json",
             "token": Constant.token
@@ -80,17 +81,19 @@ class APIService {
         }
     }
     
-    func getMyCoupons(userId: Int, page: Int, pagesize: Int, completion: @escaping (Result<CouponResponse, OTPError>) -> Void) {
-        let url = "https://dados.stag2.cpx.ae/api/my-coupons"
+    func getMyCoupons(userId: Int, page: Int, pagesize: Int, searchStr: String?, completion: @escaping (Result<CouponResponse, OTPError>) -> Void) {
+        let url = "https://dados.cpx.ae/api/my-coupons"
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded",
             "token": Constant.token // Assuming token is managed in Constant
         ]
+        let searchString: String = searchStr ?? ""
         let parameters: [String: Any] = [
             "affiliate_id": userId,
             "page": page,
             "pagesize": pagesize,
-            "is_mobile_app": "1"
+            "is_mobile_app": "1",
+            "search": searchString
         ]
 
         print(parameters)
@@ -129,7 +132,7 @@ class APIService {
     }
     
     func getUserDetails(userId: Int, completion: @escaping (Result<UserDetailsResponse, OTPError>) -> Void) {
-        let url = "https://dados.stag2.cpx.ae/api/user-detail"
+        let url = "https://dados.cpx.ae/api/user-detail"
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded",
             "token": Constant.token // Assuming token is managed in Constant
@@ -174,7 +177,7 @@ class APIService {
     }
     
     func getBankDetails(userId: Int, completion: @escaping (Result<BankDetailsResponse, OTPError>) -> Void) {
-        let url = "https://dados.stag2.cpx.ae/api/bank-detail"
+        let url = "https://dados.cpx.ae/api/bank-detail"
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded",
             "token": Constant.token // Assuming token is managed in Constant
@@ -219,7 +222,7 @@ class APIService {
     }
     
     func getCouponRequest(userId: Int, page: Int, pagesize: Int, completion: @escaping (Result<CouponRequestResponse, OTPError>) -> Void) {
-        let url = "https://dados.stag2.cpx.ae/api/requestcouponlist"
+        let url = "https://dados.cpx.ae/api/requestcouponlist"
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded",
             "token": Constant.token // Assuming token is managed in Constant
@@ -265,13 +268,13 @@ class APIService {
         }
     }
     
-    func getStats(userId: Int, page: Int, pagesize: Int, startDate: String, endDate: String, completion: @escaping (Result<StatsResponse, Error>) -> Void) {
+    func getStats(userId: Int, page: Int, pagesize: Int, startDate: String, endDate: String, advId: [Int]?, completion: @escaping (Result<StatsResponse, Error>) -> Void) {
         
         let headers: HTTPHeaders = [
             "Content-Type": "application/json"
         ]
-        let url = "https://dados.stag2.cpx.ae/api/statistics"
-        
+        let url = "https://dados.cpx.ae/api/statistics"
+        let advertiserIdArray: [Int] = advId ?? []
         let parameters: [String: Any] = [
             "timeperiod": "Daterange",
             "affiliate_id": userId,
@@ -279,9 +282,10 @@ class APIService {
             "pagesize": pagesize,
             "startdate": startDate,
             "enddate": endDate,
-            "advertiser_id": [] // Empty array as expected by the backend
+            "advertiser_id": advertiserIdArray // Empty array as expected by the backend
         ]
 
+        print(parameters)
         // Convert parameters dictionary to JSON data
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: [])
@@ -309,7 +313,7 @@ class APIService {
 
 
     func getStatsData(userId: Int, page: Int, pagesize: Int, completion: @escaping (Result<StatsResponse, OTPError>) -> Void) {
-        let url = "https://dados.stag2.cpx.ae/api/statistics"
+        let url = "https://dados.cpx.ae/api/statistics"
         let headers: HTTPHeaders = [
             "Content-Type": "application/x-www-form-urlencoded",
             "token": Constant.token // Assuming token is managed in Constant
@@ -356,6 +360,83 @@ class APIService {
                 
             case .failure(let error):
                 // Handle network or server error
+                let otpError = OTPError(message: error.localizedDescription, code: (error as NSError).code)
+                completion(.failure(otpError))
+            }
+        }
+    }
+    
+    func requestCoupon(id: String, subject: String, advertiser: String, date: String, completion: @escaping (Result<SuccessResponse, OTPError>) -> Void) {
+        let url = "https://dados.cpx.ae/api/submitrequest"
+        let headers: HTTPHeaders = ["Content-Type": "application/json", "token": Constant.token]
+        let parameters: [String: Any] = ["affiliate_id": id, "subject": subject, "advertiser": advertiser, "date": date]
+
+        print(parameters)
+        apiClient.postRequest(url: url, parameters: parameters, headers: headers) { result in
+            switch result {
+            case .success(let response):
+                if let status = response["status"] as? String, status == "success" {
+                    do {
+                        // Handle the successful response
+                        let jsonData = try JSONSerialization.data(withJSONObject: response, options: [])
+                        let otpResponse = try JSONDecoder().decode(SuccessResponse.self, from: jsonData)
+                        completion(.success(otpResponse))
+                    } catch {
+                        // Handle JSON decoding error
+                        let otpError = OTPError(message: error.localizedDescription, code: -2)
+                        completion(.failure(otpError))
+                    }
+                } else if let status = response["status"] as? String, status == "error" {
+                    // Handle the error response (403)
+                    let message = (response["error"] as? [String: Any])?["message"] as? String ?? "Unknown error"
+                    let code = (response["error"] as? [String: Any])?["status_code"] as? Int ?? 0
+                    let otpError = OTPError(message: message, code: code)
+                    completion(.failure(otpError))
+                } else {
+                    // Handle unexpected response format
+                    let otpError = OTPError(message: "Unexpected response format", code: -1)
+                    completion(.failure(otpError))
+                }
+                
+            case .failure(let error):
+                let otpError = OTPError(message: error.localizedDescription, code: (error as NSError).code)
+                completion(.failure(otpError))
+            }
+        }
+    }
+    
+    func getStatusOfAllCoupons(id: String, completion: @escaping (Result<CouponReqStatusResponse, OTPError>) -> Void) {
+        let url = "https://dados.cpx.ae/api/requestedcoupons"
+        let headers: HTTPHeaders = ["Content-Type": "application/json", "token": Constant.token]
+        let parameters: [String: Any] = ["affiliate_id": id]
+
+        apiClient.postRequest(url: url, parameters: parameters, headers: headers) { result in
+            switch result {
+            case .success(let response):
+                if let status = response["status"] as? String, status == "success" {
+                    do {
+                        // Handle the successful response
+                        let jsonData = try JSONSerialization.data(withJSONObject: response, options: [])
+                        let otpResponse = try JSONDecoder().decode(CouponReqStatusResponse.self, from: jsonData)
+                        completion(.success(otpResponse))
+                    } catch {
+                        // Handle JSON decoding error
+                        let otpError = OTPError(message: error.localizedDescription, code: -2)
+                        completion(.failure(otpError))
+                    }
+                } else if let status = response["status"] as? String, status == "error" {
+                    // Handle the error response (403)
+                    let message = (response["error"] as? [String: Any])?["message"] as? String ?? "Unknown error"
+                    let code = (response["error"] as? [String: Any])?["status_code"] as? Int ?? 0
+                    let otpError = OTPError(message: message, code: code)
+                    completion(.failure(otpError))
+                } else {
+                    // Handle unexpected response format
+                    let otpError = OTPError(message: "Unexpected response format", code: -1)
+                    completion(.failure(otpError))
+                }
+                
+            case .failure(let error):
                 let otpError = OTPError(message: error.localizedDescription, code: (error as NSError).code)
                 completion(.failure(otpError))
             }

@@ -82,6 +82,19 @@ class AppUtility: NSObject {
             view.makeToast(message)
         }
     }
+    
+    class func showLoader() {
+        SVProgressHUD.show()
+        // Disable user interaction on the key window
+        UIApplication.shared.beginIgnoringInteractionEvents()
+    }
+
+    class func hideLoader() {
+        SVProgressHUD.dismiss()
+        // Re-enable user interaction on the key window
+        UIApplication.shared.endIgnoringInteractionEvents()
+    }
+
 
     class func showProgressHUD() {
         SVProgressHUD.setBackgroundColor(.white)

@@ -10,9 +10,17 @@ class UserSessionManager {
     static let shared = UserSessionManager()
     
     private let userDefaultsManager = UserDefaultsManager()
-    private var userData: ConfirmOTPData?
+    private var userData: ConfirmOTPData?{
+        didSet {
+            // Automatically update user-specific fields when userData is set
+            id = userData?.id
+            email = userData?.email
+            // Any other fields you want to update
+        }
+    }
     
     
+    var id: String?
     var email: String?
     var phone: String?
     var company: String?
@@ -37,8 +45,19 @@ class UserSessionManager {
     private func loadUserData() {
         if let data: ConfirmOTPData = userDefaultsManager.load(ConfirmOTPData.self, forKey: "UserData") {
             self.userData = data
+            print("Loaded user data with ID: \(data.id)")
+        } else {
+            print("No user data found in UserDefaults")
         }
     }
+    
+    // Save the user data and immediately load it into memory
+        func saveUserData(_ data: ConfirmOTPData) {
+            // Save the data to UserDefaults
+            userDefaultsManager.save(data, forKey: "UserData")
+            // Load it into memory
+            self.userData = data
+        }
     
     // Get the user ID
     var userId: String? {
@@ -60,7 +79,8 @@ class UserSessionManager {
         userData = nil
     }
     
-    func saveUserDetails(email: String, name: String, phone: String, birthday: String, address: String) {
+    func saveUserDetails(id: String, email: String, name: String, phone: String, birthday: String, address: String) {
+        self.id = id
         self.email = email
         self.name = name
         self.phone = phone
@@ -68,8 +88,8 @@ class UserSessionManager {
         self.address = address
     }
     
-    func getUserDetails() -> (email: String?, name: String?, phone: String?, birthday: String?, address: String?) {
-        return (email, name, phone, birthday, address)
+    func getUserDetails() -> (id: String?, email: String?, name: String?, phone: String?, birthday: String?, address: String?) {
+        return (id, email, name, phone, birthday, address)
     }
     
     func saveBankDetails(accountHolderName: String, accountNumber: String, bankName: String, bankBranch: String, bankCountry: String, iban: String, swiftCode: String) {

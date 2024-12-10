@@ -14,8 +14,11 @@
 		71203B932C9AD950002C0597 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71203B922C9AD94F002C0597 /* FAQViewController.swift */; };
 		71203B962C9AE2FA002C0597 /* CouponReqCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71203B942C9AE2FA002C0597 /* CouponReqCellTableViewCell.swift */; };
 		71203B972C9AE2FA002C0597 /* CouponReqCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71203B952C9AE2FA002C0597 /* CouponReqCellTableViewCell.xib */; };
+		71325DC72CA441E9008BB30C /* DeleteOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71325DC62CA441E9008BB30C /* DeleteOptionsVC.swift */; };
+		71325DC92CA6C423008BB30C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71325DC82CA6C422008BB30C /* UserNotifications.framework */; };
+		71325DCA2CA6C57C008BB30C /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71325DC82CA6C422008BB30C /* UserNotifications.framework */; };
+		71325DCD2CABCE52008BB30C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 71325DCC2CABCE50008BB30C /* GoogleService-Info.plist */; };
 		715612BF2C9C58D900DFBA63 /* LogoutOptionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715612BE2C9C58D900DFBA63 /* LogoutOptionsVC.swift */; };
-		715612C42C9D3AB800DFBA63 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 715612C32C9D3AB800DFBA63 /* GoogleService-Info.plist */; };
 		715612C62C9D611700DFBA63 /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715612C52C9D611700DFBA63 /* AppUtility.swift */; };
 		715612CB2C9D70C400DFBA63 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715612CA2C9D70C400DFBA63 /* UIViewController + Extension.swift */; };
 		715612CD2C9D929600DFBA63 /* DropdownManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715612CC2C9D929600DFBA63 /* DropdownManager.swift */; };
@@ -103,6 +106,7 @@
 		71FA79372C9875330017197B /* AktivGroteskEx-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71FA79272C9875330017197B /* AktivGroteskEx-Regular.otf */; };
 		71FA79382C9875330017197B /* AktivGroteskEx-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 71FA79282C9875330017197B /* AktivGroteskEx-Thin.otf */; };
 		71FA793A2C98762F0017197B /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79392C98762F0017197B /* OnBoardingCollectionViewCell.swift */; };
+		F4EC61D655140D8C8F194A70 /* Pods_NotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA4E90FDA1001A44A09F3B94 /* Pods_NotificationServiceExtension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,9 +143,12 @@
 		71203B922C9AD94F002C0597 /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		71203B942C9AE2FA002C0597 /* CouponReqCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponReqCellTableViewCell.swift; sourceTree = "<group>"; };
 		71203B952C9AE2FA002C0597 /* CouponReqCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponReqCellTableViewCell.xib; sourceTree = "<group>"; };
+		71325DC62CA441E9008BB30C /* DeleteOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteOptionsVC.swift; sourceTree = "<group>"; };
+		71325DC82CA6C422008BB30C /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		71325DCB2CA6C5C0008BB30C /* NotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NotificationServiceExtension.entitlements; sourceTree = "<group>"; };
+		71325DCC2CABCE50008BB30C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		715612BE2C9C58D900DFBA63 /* LogoutOptionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutOptionsVC.swift; sourceTree = "<group>"; };
 		715612C02C9C6C1F00DFBA63 /* cpx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = cpx.entitlements; sourceTree = "<group>"; };
-		715612C32C9D3AB800DFBA63 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		715612C52C9D611700DFBA63 /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		715612CA2C9D70C400DFBA63 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		715612CC2C9D929600DFBA63 /* DropdownManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownManager.swift; sourceTree = "<group>"; };
@@ -247,6 +254,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71325DCA2CA6C57C008BB30C /* UserNotifications.framework in Frameworks */,
+				F4EC61D655140D8C8F194A70 /* Pods_NotificationServiceExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +263,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71325DC92CA6C423008BB30C /* UserNotifications.framework in Frameworks */,
 				5B4B0C47E036363C816866CF /* Pods_cpx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +306,7 @@
 		719C96732CA3FAC2003B5067 /* NotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
+				71325DCB2CA6C5C0008BB30C /* NotificationServiceExtension.entitlements */,
 				719C96742CA3FAC2003B5067 /* NotificationService.swift */,
 				719C96762CA3FAC2003B5067 /* Info.plist */,
 			);
@@ -363,6 +374,7 @@
 				71F1E06C2CA2CE110055BE53 /* PayoutsVC.swift */,
 				71B0F4D72C98842100CB1CBC /* LoginOptionsVC.swift */,
 				715612BE2C9C58D900DFBA63 /* LogoutOptionsVC.swift */,
+				71325DC62CA441E9008BB30C /* DeleteOptionsVC.swift */,
 				71B517D02C9BE9EC00311D23 /* LanguagePopupVC.swift */,
 				71B5B2BE2C9957C9007C9BAC /* OtpVC.swift */,
 				71203B8C2C9ABBAD002C0597 /* PersonalDetailsVC.swift */,
@@ -481,7 +493,7 @@
 				71FA79102C9875000017197B /* Assets.xcassets */,
 				71FA79122C9875000017197B /* LaunchScreen.storyboard */,
 				71FA79152C9875000017197B /* Info.plist */,
-				715612C32C9D3AB800DFBA63 /* GoogleService-Info.plist */,
+				71325DCC2CABCE50008BB30C /* GoogleService-Info.plist */,
 				71B5B2C82C99662C007C9BAC /* Localizable.strings */,
 			);
 			path = cpx;
@@ -519,6 +531,7 @@
 		B45223D81EE641594409EB37 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				71325DC82CA6C422008BB30C /* UserNotifications.framework */,
 				19E2B40C107CCC6F614C9A0E /* Pods_cpx.framework */,
 				DA4E90FDA1001A44A09F3B94 /* Pods_NotificationServiceExtension.framework */,
 			);
@@ -543,6 +556,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 719C968A2CA4097E003B5067 /* Build configuration list for PBXNativeTarget "NotificationServiceExtension" */;
 			buildPhases = (
+				09D6FF606A72467124FD3C80 /* [CP] Check Pods Manifest.lock */,
 				719C967E2CA4097E003B5067 /* Sources */,
 				719C967F2CA4097E003B5067 /* Frameworks */,
 				719C96802CA4097E003B5067 /* Resources */,
@@ -646,7 +660,7 @@
 				71FA79342C9875330017197B /* AktivGroteskEx-Bold.otf in Resources */,
 				71FA79362C9875330017197B /* AktivGroteskEx-Medium.otf in Resources */,
 				71FA79382C9875330017197B /* AktivGroteskEx-Thin.otf in Resources */,
-				715612C42C9D3AB800DFBA63 /* GoogleService-Info.plist in Resources */,
+				71325DCD2CABCE52008BB30C /* GoogleService-Info.plist in Resources */,
 				71B5B2CA2C99662C007C9BAC /* Localizable.strings in Resources */,
 				71FA79142C9875000017197B /* Base in Resources */,
 				71FA790F2C9874FD0017197B /* Base in Resources */,
@@ -656,6 +670,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		09D6FF606A72467124FD3C80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		241490496F9BDF23A62EE61C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -743,6 +779,7 @@
 				71B5B2E32C996716007C9BAC /* UIView+QuickCompoenet+Extension.swift in Sources */,
 				715612DA2CA1455200DFBA63 /* AdjustApplicationEventLogger.swift in Sources */,
 				71B5B2DC2C996716007C9BAC /* NSObject+Extension.swift in Sources */,
+				71325DC72CA441E9008BB30C /* DeleteOptionsVC.swift in Sources */,
 				71B0F4DE2C988D4A00CB1CBC /* Keychain.swift in Sources */,
 				71B5B3052C99A4E0007C9BAC /* PerformanceHeaderView.swift in Sources */,
 				71B0F4E52C98A2CE00CB1CBC /* PlannerVC.swift in Sources */,
@@ -826,11 +863,13 @@
 /* Begin XCBuildConfiguration section */
 		719C968B2CA4097E003B5067 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A11EEE39FF7CDAAD93EB168 /* Pods-NotificationServiceExtension.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationServiceExtension/NotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3PP33MPYN9;
+				DEVELOPMENT_TEAM = WM7TF52YYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationServiceExtension;
@@ -841,7 +880,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliate.NotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliates.NotificationServiceExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -853,11 +892,13 @@
 		};
 		719C968C2CA4097E003B5067 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABB51B3F6AE96394BCE0080 /* Pods-NotificationServiceExtension.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = NotificationServiceExtension/NotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3PP33MPYN9;
+				DEVELOPMENT_TEAM = WM7TF52YYX;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotificationServiceExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotificationServiceExtension;
@@ -868,7 +909,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliate.NotificationServiceExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliates.NotificationServiceExtensions;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1008,29 +1049,29 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = cpx/cpx.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3PP33MPYN9;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = WM7TF52YYX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cpx/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CPX Affiliate";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.12.1;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Cpx_Prov_Profile_Dev;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -1050,29 +1091,29 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = cpx/cpx.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 3PP33MPYN9;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = WM7TF52YYX;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = cpx/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "CPX Affiliate";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.business";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.12.1;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.itcan.cpxaffiliates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = Cpx_Prov_Profile_Dev;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

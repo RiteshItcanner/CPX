@@ -2,8 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>MoEngageAppDelegateProxyEnabled</key>
-	<false/>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -13,10 +13,12 @@
 			<string>GoogleSignIn</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.996684869332-bdd03v8bd01hnf51nspo4c49nhsdt420</string>
+				<string>com.googleusercontent.apps.996684869332-0ajo5q6u9kp5etgpj77g6urrbsalftef</string>
 			</array>
 		</dict>
 	</array>
+	<key>MoEngageAppDelegateProxyEnabled</key>
+	<false/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AktivGrotesk-Bold.ttf</string>
@@ -45,5 +47,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

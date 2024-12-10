@@ -8,6 +8,7 @@
 import UIKit
 import AEOTPTextField
 import SVProgressHUD
+import MoEngageAnalytics
 
 class OtpVC: UIViewController {
 
@@ -22,6 +23,7 @@ class OtpVC: UIViewController {
     var timer: Timer?
     var remainingTime: TimeInterval = 120
     var email = ""
+    private let moAnalytics: MoEngageSDKAnalytics = MoEngageSDKAnalytics.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,12 +149,23 @@ class OtpVC: UIViewController {
             case .success(let otpResponse):
                 print("OTP Confirmed: \(otpResponse.message)")
                 
-                let userDefaultsManager = UserDefaultsManager()
-                userDefaultsManager.save(otpResponse.data, forKey: "UserData")
+//                let userDefaultsManager = UserDefaultsManager()
+//                print("Saving user data with ID: \(otpResponse.data.id)")
+                
+//                userDefaultsManager.save(otpResponse.data, forKey: "UserData")
                 let userid = otpResponse.data.id
+//                UserSessionManager.shared.saveUserDetails(id: userid, email: otpResponse.data.email, name: otpResponse.data.firstName, phone: otpResponse.data.phone, birthday: "", address: "")
+                
+                UserSessionManager.shared.saveUserData(otpResponse.data)
+                
                 SDKAnalyticsManager.shared.trackEvent(AuthEvent.login,
                                                       params: ["contact_id":userid])
                 if otpResponse.data.status == "Active" {
+                    self.moAnalytics.setUniqueID(userid)
+                    self.moAnalytics.setFirstName(otpResponse.data.firstName + " " + (otpResponse.data.lastName ?? ""))
+                    self.moAnalytics.setEmailID(otpResponse.data.email)
+                    self.moAnalytics.setMobileNumber(otpResponse.data.phone)
+                    self.moAnalytics.enableDataTracking()
                     self.showMainTabBar()
                 }
                 

@@ -64,7 +64,7 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
                 let name = couponResponse.data.name ?? ""
                 let birthday = couponResponse.data.birth_date ?? ""
                 
-                UserSessionManager.shared.saveUserDetails(email: email, name: name, phone: phone, birthday: birthday, address: address)
+                UserSessionManager.shared.saveUserDetails(id: userId, email: email, name: name, phone: phone, birthday: birthday, address: address)
                 userDetailsSuccess = true
             case .failure(let otpError):
                 print("Error fetching User details: \(otpError.message)")

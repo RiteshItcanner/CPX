@@ -542,12 +542,17 @@ enum AccFieldType {
     
 }
 
-func getFirstAndLastDateOfCurrentMonth() -> (monthNumber: Int, firstDate: String, lastDate: String)? {
+func getFirstAndLastDateOfCurrentMonth() -> (monthNumber: Int, todayDate: String, firstDate: String, lastDate: String)? {
     let calendar = Calendar.current
     let today = Date()
     
     // Get the current month number
     let monthNumber = calendar.component(.month, from: today)
+    
+    // Get today's date
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd"
+    let todayDateString = dateFormatter.string(from: today)
     
     // Get the first date of the current month
     guard let firstDate = calendar.date(from: calendar.dateComponents([.year, .month], from: today)) else { return nil }
@@ -555,15 +560,13 @@ func getFirstAndLastDateOfCurrentMonth() -> (monthNumber: Int, firstDate: String
     // Get the last date of the current month
     guard let lastDate = calendar.date(byAdding: DateComponents(month: 1, day: -1), to: firstDate) else { return nil }
     
-    // Date formatter to convert Date to "yyyy-MM-dd" format
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd"
-    
+    // Convert the first and last dates to "yyyy-MM-dd" format
     let firstDateString = dateFormatter.string(from: firstDate)
     let lastDateString = dateFormatter.string(from: lastDate)
     
-    return (monthNumber, firstDateString, lastDateString)
+    return (monthNumber, todayDateString, firstDateString, lastDateString)
 }
+
 
 
 func getFirstAndLastDate(of month: Int? = nil, in year: Int? = nil) -> (firstDate: String, lastDate: String)? {

@@ -76,17 +76,19 @@ struct CouponRequestResponse: Codable {
 }
 
 struct Datum: Codable {
-    let couponCode, team: String
-    let function: String
-    let brandName: String
-    let industry: String
+    let couponCode, team: String?
+    let function: String?
+    let brandName: String?
+    let industry: String?
     let globalNewPayout, globalReturningPayout: String
-    let newAREPayout, returningAREPayout: String
-    let newBHRPayout, returningBHRPayout, newEGYPayout, returningEGYPayout: String
-    let newKWTPayout, returningKWTPayout: String
-    let newOMNPayout, returningOMNPayout, newQATPayout, returningQATPayout: String
-    let newSAUPayout, returningSAUPayout: String
+    let newAREPayout, returningAREPayout: String?
+    let newBHRPayout, returningBHRPayout, newEGYPayout, returningEGYPayout: String?
+    let newKWTPayout, returningKWTPayout: String?
+    let newOMNPayout, returningOMNPayout, newQATPayout, returningQATPayout: String?
+    let newSAUPayout, returningSAUPayout: String?
     let url: String?
+    
+    var couponStatus: Bool? = false
     
     enum CodingKeys: String, CodingKey {
         case couponCode = "Coupon_Code"
@@ -185,7 +187,7 @@ struct DetailsConversion: Codable {
 struct StatsTotals: Codable {
     let totalConversions: Int
     let totalPage: Int
-    let totalPayout: Int
+    let totalPayout: Double
     let totalAdvertiser: Int
 
     enum CodingKeys: String, CodingKey {
@@ -193,5 +195,45 @@ struct StatsTotals: Codable {
         case totalPage = "total_page"
         case totalPayout = "total_payout"
         case totalAdvertiser = "total_advertiser"
+    }
+}
+
+
+// MARK: - Coupon Request Status Model
+struct CouponReqStatusResponse: Codable {
+    let status: String
+    let result: Bool
+    let message: String
+    let code: Int
+    let data: CouponReqStatusData
+}
+
+// MARK: - DataClass
+struct CouponReqStatusData: Codable {
+    let total: Int
+    let results: [CouponReqStatusResults]
+}
+
+// MARK: - Result
+struct CouponReqStatusResults: Codable {
+    let id: String
+    let properties: Properties
+    let createdAt, updatedAt: String
+    let archived: Bool
+}
+
+// MARK: - Properties
+struct Properties: Codable {
+    let hsCreatedate, hsLastmodifieddate, hsObjectID, hsTaskBody: String?
+    let hsTaskIsCompleted, hsTaskStatus, hsTaskSubject: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case hsCreatedate = "hs_createdate"
+        case hsLastmodifieddate = "hs_lastmodifieddate"
+        case hsObjectID = "hs_object_id"
+        case hsTaskBody = "hs_task_body"
+        case hsTaskIsCompleted = "hs_task_is_completed"
+        case hsTaskStatus = "hs_task_status"
+        case hsTaskSubject = "hs_task_subject"
     }
 }

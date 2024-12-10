@@ -9,5 +9,6 @@ import UIKit
 
 class CompanyCollCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageRoundView: UIView!
     @IBOutlet weak var cellImg: UIImageView!
 }

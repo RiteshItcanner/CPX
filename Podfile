@@ -35,7 +35,7 @@ target 'cpx' do
   pod 'ProgressHUD'
   #  pod 'PageMenu'
   pod 'MoEngage-iOS-SDK','~>9.18.0'
-  #  pod 'MoEngageInApp'
+#    pod 'MoEngageInApp'
   pod 'MoEngage-iOS-SDK/Inbox','~>9.18.0'
   #  pod 'MoEngageRichNotification'
   

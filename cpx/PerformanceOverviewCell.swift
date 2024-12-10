@@ -34,8 +34,8 @@ class PerformanceOverviewCell: UITableViewCell {
 //        companyLogoImageView.image = UIImage(named: company.advertiserLogo)
         companyNameLabel.text = company.advertiser
         conversionsValueLabel.text = "\(company.totalConversions)"
-        payoutValueLabel.text = "\(company.totalPayout)"
-        revenueValueLabel.text = "\(company.totalSaleAmount)"
+        payoutValueLabel.text = "AED \(company.totalPayout)"
+        revenueValueLabel.text = "AED \(company.totalSaleAmount)"
         
         if let logoUrlString = company.advertiserLogo, !logoUrlString.isEmpty {
             if let logoUrl = URL(string: logoUrlString) {

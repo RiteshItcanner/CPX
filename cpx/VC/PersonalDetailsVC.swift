@@ -10,7 +10,6 @@ import SVProgressHUD
 
 class PersonalDetailsVC: UIViewController {
     
-    @IBOutlet weak var btnDelete: UIButton!
     @IBOutlet weak var titleStr: UILabel!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
@@ -39,29 +38,29 @@ class PersonalDetailsVC: UIViewController {
         setemailvalidation()
     }
     
-    private func fetchUserDetails() {
-        let userId = UserSessionManager.shared.userId ?? ""
-        let intUserId = Int(userId) ?? 0
-        SVProgressHUD.show()
-        APIService.shared.getUserDetails(userId: intUserId) { result in
-            SVProgressHUD.dismiss()
-            switch result {
-            case .success(let couponResponse):
-                print("User details successfully: \(couponResponse)")
-                let email = couponResponse.data.email ?? ""
-                let phone = couponResponse.data.phone ?? ""
-                let address = couponResponse.data.address1 ?? ""
-                let name = ""
-                let birthday = ""
-                UserSessionManager.shared.saveUserDetails(email: email, name: name, phone: phone, birthday: birthday, address: address)
-                self.setDetails()
-
-            case .failure(let otpError):
-                print("Error fetching User details: \(otpError.message)")
-                self.showAlert(APPLocalizable.app_title, message: otpError.message)
-            }
-        }
-    }
+//    private func fetchUserDetails() {
+//        let userId = UserSessionManager.shared.userId ?? ""
+//        let intUserId = Int(userId) ?? 0
+//        SVProgressHUD.show()
+//        APIService.shared.getUserDetails(userId: intUserId) { result in
+//            SVProgressHUD.dismiss()
+//            switch result {
+//            case .success(let couponResponse):
+//                print("User details successfully: \(couponResponse)")
+//                let email = couponResponse.data.email ?? ""
+//                let phone = couponResponse.data.phone ?? ""
+//                let address = couponResponse.data.address1 ?? ""
+//                let name = ""
+//                let birthday = ""
+//                UserSessionManager.shared.saveUserDetails(email: email, name: name, phone: phone, birthday: birthday, address: address)
+//                self.setDetails()
+//
+//            case .failure(let otpError):
+//                print("Error fetching User details: \(otpError.message)")
+//                self.showAlert(APPLocalizable.app_title, message: otpError.message)
+//            }
+//        }
+//    }
     
     private func setDetails() {
         let userDetails = UserSessionManager.shared.getUserDetails()
@@ -79,7 +78,6 @@ class PersonalDetailsVC: UIViewController {
     
     private func configLanguage() {
         btnSave.setTitle(APPLocalizable.edit_request, for: .normal)
-        btnDelete.setTitle(APPLocalizable.delete_acc, for: .normal)
         emailLbl.text = APPLocalizable.email
         phoneLbl.text = APPLocalizable.phone_number
         addressLbl.text = APPLocalizable.address
@@ -153,19 +151,14 @@ class PersonalDetailsVC: UIViewController {
     }
     
     @IBAction func onClickDelete(_ sender: Any) {
-//        if let thisController = UIStoryboard(storyboard: UIStoryboard.Storyboard.popup).instantiateViewController(withIdentifier: "DeleteAccountPopupVC") as? DeleteAccountPopupVC {
-//            thisController.modalPresentationStyle = .overFullScreen
-//            navigationController?.present(thisController, animated: true)
-//            thisController.blockConfirm = {
-//                SDKAnalyticsManager.shared.trackEvent(event: AuthEvent.deleteAcc)
-//                // Need to call delete account API and then logout. remove data from userdefaults
-//
-//                DispatchQueue.main.asyncAfter(deadline: .now()) {
-//                    AppUtility.deleteLocalData()
-//                    ApplicationRoot.shared.setAuthanticationModuleAsRoot()
-//                }
-//            }
-//        }
+        let storyboard = UIStoryboard(name: "Popup", bundle: nil)
+        if let vc = storyboard.instantiateViewController(withIdentifier: "DeleteOptionsVC") as? DeleteOptionsVC {
+            // Optionally, configure the view controller here
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            self.navigationController?.present(vc, animated: true)
+        }
+
     }
     
     

@@ -14,7 +14,7 @@ class AccountsVC: UIViewController {
     @IBOutlet weak var statusLbl: UILabel!
     
     private var selectedLanguage = "English"
-    private var accountFields: [AccFieldType] = [.personalDetails, .bankDetails, .favBrands, .support]
+    private var accountFields: [AccFieldType] = [.personalDetails, .bankDetails, .support, .delete]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,9 +77,11 @@ extension AccountsVC: UITableViewDelegate, UITableViewDataSource {
         if (indexPath.row == accountFields.count - 1) {
             cell.cellArrowImg.isHidden = true
             cell.iconView.isHidden = true
+            cell.lblTitle.textColor = UIColor.red
         } else {
             cell.cellArrowImg.isHidden = false
             cell.iconView.isHidden = false
+            cell.lblTitle.textColor = UIColor(named: "ThemeTextColor")
         }
         return cell
     }
@@ -102,21 +104,28 @@ extension AccountsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell: UITableViewCell = tableView.cellForRow(at: indexPath)!
         selectedCell.contentView.backgroundColor = .clear
-        
+        let userId = UserSessionManager.shared.userId ?? ""
         
         switch accountFields[indexPath.row] {
 
             
         case .personalDetails:
+            
+            SDKAnalyticsManager.shared.trackEvent(AppEvent.clickPersonalDetails,
+                                                  params: ["contact_id":userId])
             self.tabBarController?.tabBar.isHidden = true
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "PersonalDetailsVC") as! PersonalDetailsVC
             self.navigationController?.pushViewController(vc, animated: true)
 
         case .bankDetails:
+            SDKAnalyticsManager.shared.trackEvent(AppEvent.clickBankDetails,
+                                                  params: ["contact_id":userId])
             self.tabBarController?.tabBar.isHidden = true
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "BankDetailsVC") as! BankDetailsVC
             self.navigationController?.pushViewController(vc, animated: true)
         case .support:
+            SDKAnalyticsManager.shared.trackEvent(AppEvent.clickSupportpolicy,
+                                                  params: ["contact_id":userId])
             self.tabBarController?.tabBar.isHidden = true
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "SupportVC") as! SupportVC
             self.navigationController?.pushViewController(vc, animated: true)
@@ -134,15 +143,24 @@ extension AccountsVC: UITableViewDelegate, UITableViewDataSource {
             
         case .refer:
             print("Personal Details")
-
+            
         case .delete:
-            print("Personal Details")
+            SDKAnalyticsManager.shared.trackEvent(AppEvent.deleteAccount,
+                                                  params: ["contact_id":userId])
+            let storyboard = UIStoryboard(name: "Popup", bundle: nil)
+            if let vc = storyboard.instantiateViewController(withIdentifier: "DeleteOptionsVC") as? DeleteOptionsVC {
+                // Optionally, configure the view controller here
+                vc.modalPresentationStyle = .overFullScreen
+                vc.modalTransitionStyle = .crossDissolve
+                self.navigationController?.present(vc, animated: true)
+            }
+            
         case .postRates:
             print("Personal Details")
             
         case.contactUs:
             print("Personal Details")
-
+            
         case .favBrands:
             print("Personal Details")
         }

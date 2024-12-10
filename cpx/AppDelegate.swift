@@ -38,12 +38,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         SDKAnalyticsManager.shared.appDidFinishLaunch(app: application,
                                                       options: launchOptions)
         
+        requestNotificationPermission()
         let sdkConfig = MoEngageSDKConfig(appId: appID, dataCenter: .data_center_01)
         
-        sdkConfig.appGroupID = "group.com.itcan.cpxaffiliate.MoEngage"
+        sdkConfig.appGroupID = "group.com.itcan.cpxaffiliates.MoEngage"
+//        MoEngageSDKInApp.sharedInstance.setInAppDelegate(self)
         //        sdkConfig.enableLogs = true
         //        moEngage.initializeDefaultLiveInstance(sdkConfig,
         //                                               sdkState: .enabled)
+        
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current() .delegate = self
+        }
         
 #if DEBUG
         moEngage.initializeDefaultTestInstance(sdkConfig,
@@ -116,6 +122,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
+    func requestNotificationPermission() {
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+            if let error = error {
+                // Handle the error
+                print("Error requesting notification permission: \(error.localizedDescription)")
+                return
+            }
+            
+            // Permission granted
+            if granted {
+                print("Notification permission granted.")
+                // You can register for remote notifications here if needed
+            } else {
+                print("Notification permission denied.")
+            }
+        }
+    }
+
     
 }
 

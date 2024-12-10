@@ -62,26 +62,26 @@ class PayoutsVC: UIViewController {
             brandImg.image = UIImage(named: "placeholder")
         }
         
-        newPayKSALbl.text = "New \(couponInfo.newSAUPayout)"
-        returnPayKSALbl.text = "Return \(couponInfo.returningSAUPayout)"
+        newPayKSALbl.text = "New \(couponInfo.newSAUPayout ?? "")"
+        returnPayKSALbl.text = "Return \(couponInfo.returningSAUPayout ?? "")"
         
-        newPayUAELbl.text = "New \(couponInfo.newAREPayout)"
-        returnPayUAELbl.text = "Return \(couponInfo.returningAREPayout)"
+        newPayUAELbl.text = "New \(couponInfo.newAREPayout ?? "")"
+        returnPayUAELbl.text = "Return \(couponInfo.returningAREPayout ?? "")"
         
-        newPayBHRLbl.text = "New \(couponInfo.newBHRPayout)"
-        returnPayBHRLbl.text = "Return \(couponInfo.returningBHRPayout)"
+        newPayBHRLbl.text = "New \(couponInfo.newBHRPayout ?? "")"
+        returnPayBHRLbl.text = "Return \(couponInfo.returningBHRPayout ?? "")"
         
-        newPayEGYLbl.text = "New \(couponInfo.newEGYPayout)"
-        returnPayEGYLbl.text = "Return \(couponInfo.returningEGYPayout)"
+        newPayEGYLbl.text = "New \(couponInfo.newEGYPayout ?? "")"
+        returnPayEGYLbl.text = "Return \(couponInfo.returningEGYPayout ?? "")"
         
-        newPayKWTLbl.text = "New \(couponInfo.newKWTPayout)"
-        returnPayKWTLbl.text = "Return \(couponInfo.returningKWTPayout)"
+        newPayKWTLbl.text = "New \(couponInfo.newKWTPayout ?? "")"
+        returnPayKWTLbl.text = "Return \(couponInfo.returningKWTPayout ?? "")"
         
-        newPayOMNLbl.text = "New \(couponInfo.newOMNPayout)"
-        returnPayOMNLbl.text = "Return \(couponInfo.returningOMNPayout)"
+        newPayOMNLbl.text = "New \(couponInfo.newOMNPayout ?? "")"
+        returnPayOMNLbl.text = "Return \(couponInfo.returningOMNPayout ?? "")"
         
-        newPayQATLbl.text = "New \(couponInfo.newQATPayout)"
-        returnPayQATLbl.text = "Return \(couponInfo.returningQATPayout)"
+        newPayQATLbl.text = "New \(couponInfo.newQATPayout ?? "")"
+        returnPayQATLbl.text = "Return \(couponInfo.returningQATPayout ?? "")"
         
     }
     

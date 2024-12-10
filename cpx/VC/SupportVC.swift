@@ -58,15 +58,22 @@ extension SupportVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userId = UserSessionManager.shared.userId ?? ""
         switch indexPath.row {
         case 0:
+            SDKAnalyticsManager.shared.trackEvent(AppEvent.clickFaq,
+                                                  params: ["contact_id":userId])
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "FAQViewController") as! FAQViewController
             self.navigationController?.pushViewController(vc, animated: true)
         case 1:
-            guard let url = URL(string: "https://moon.influencer.ae/en/terms&conditions") else { return }
+            SDKAnalyticsManager.shared.trackEvent(AppEvent.clickTerms,
+                                                  params: ["contact_id":userId])
+            guard let url = URL(string: "https://www.cpxaffiliate.com/en/terms") else { return }
             UIApplication.shared.open(url)
         case 2:
-            guard let url = URL(string: "https://moon.influencer.ae/en/privacy-policy") else { return }
+            SDKAnalyticsManager.shared.trackEvent(AppEvent.clickPrivacyPolicy,
+                                                  params: ["contact_id":userId])
+            guard let url = URL(string: "https://www.cpxaffiliate.com/en/privacy-policy") else { return }
             UIApplication.shared.open(url)
         default:
             break
