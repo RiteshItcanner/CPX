@@ -48,13 +48,13 @@ class BankDetailsVC: UIViewController {
             switch result {
             case .success(let couponResponse):
                 print("Bank details successfully: \(couponResponse)")
-                let accountHolderName = couponResponse.data.beneficiaryName
-                let accountNumber = couponResponse.data.accountNumber
-                let bankName = couponResponse.data.bankName
-                let bankBranch = couponResponse.data.bankBranch
-                let bankCountry = couponResponse.data.bankCountry
-                let iban = couponResponse.data.ibanNumber
-                let swiftCode = couponResponse.data.swiftNumber
+                let accountHolderName = couponResponse.data?.beneficiaryName ?? ""
+                let accountNumber = couponResponse.data?.accountNumber ?? ""
+                let bankName = couponResponse.data?.bankName ?? ""
+                let bankBranch = couponResponse.data?.bankBranch ?? ""
+                let bankCountry = couponResponse.data?.bankCountry ?? ""
+                let iban = couponResponse.data?.ibanNumber ?? ""
+                let swiftCode = couponResponse.data?.swiftNumber ?? ""
                 
                 UserSessionManager.shared.saveBankDetails(accountHolderName: accountHolderName, accountNumber: accountNumber, bankName: bankName, bankBranch: bankBranch, bankCountry: bankCountry, iban: iban, swiftCode: swiftCode)
                 self.setDetails()

@@ -137,17 +137,17 @@ struct BankDetailsResponse: Codable {
     let code: Int
     let result: Bool
     let message: String
-    let data: BankDetailsData
+    let data: BankDetailsData?
 }
 
 struct BankDetailsData: Codable {
-    let bankName: String
-    let accountNumber: String
-    let beneficiaryName: String
-    let ibanNumber: String
-    let bankBranch: String
-    let bankCountry: String
-    let swiftNumber: String
+    let bankName: String?
+    let accountNumber: String?
+    let beneficiaryName: String?
+    let ibanNumber: String?
+    let bankBranch: String?
+    let bankCountry: String?
+    let swiftNumber: String?
 
     enum CodingKeys: String, CodingKey {
         case bankName = "bank_name"

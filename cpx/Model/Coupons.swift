@@ -39,11 +39,11 @@ struct Totals: Codable {
 
 // MARK: - Coupon
 struct Coupon: Codable {
-    let offerName, coupon: String
+    let offerName, coupon: String?
     let offerLogo: String?
-    let advertiser, couponOffering: String
-    let assignmentDate: String
-    let status: String
+    let advertiser, couponOffering: String?
+    let assignmentDate: String?
+    let status: String?
 
     enum CodingKeys: String, CodingKey {
         case offerName = "offer_name"
@@ -57,8 +57,8 @@ struct Coupon: Codable {
 }
 
 struct Offer: Codable {
-    let offerId, offerName: String
-    let offerLogo: String
+    let offerId, offerName: String?
+    let offerLogo: String?
 
     enum CodingKeys: String, CodingKey {
         case offerId = "offer_id"

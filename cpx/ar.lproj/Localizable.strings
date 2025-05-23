@@ -4,7 +4,7 @@
 
 
 
-"app_title" = "مون ";
+"app_title" = "CPX";
 "onboarding_ttl_one" = "خطط لإعلاناتك بكل سهولة:";
 "onboarding_ttl_two" = "احصل على كافة التفاصيل الخاصة بك للإعلان المخطط له";
 "onboarding_ttl_three" = "عرض أرباحك والأداء";
@@ -96,7 +96,8 @@
 "usr_not_found" = "لم يتم العثور على المستخدم في مون.";
 "fail_signin_msg" = "فشل في تسجيل الدخول.";
 "invalid_email_id" = "البريد الإلكتروني غير صالح.";
-"enter_email_msg" = "الرجاء إدخال البريد الإلكتروني.";
+//"enter_email_msg" = "الرجاء إدخال البريد الإلكتروني.";
+"enter_email_msg" = "Please enter email id.";
 "enter_pass_msg" = "الرجاء إدخال كلمة مرور صالحة.";
 "save" = "حفظ";
 "fail_logout" = "فشل في تسجيل الخروج.";
